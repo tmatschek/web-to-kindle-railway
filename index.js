@@ -33,7 +33,7 @@ express()
   .listen(PORT, () => console.log(`Listening on ${PORT}`));
 
 
-function convert(filename) {
+function convert('/tmp/screenshot.png') {
   return new Promise((resolve, reject) => {
     const args = [filename, '-gravity', 'center', '-extent', '600x800', '-colorspace', 'gray', '-depth', '8', filename];
     execFile('convert', args, (error, stdout, stderr) => {
